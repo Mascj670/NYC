@@ -49,3 +49,57 @@ section h2 {
     width: 100%; 
     box-sizing: border-box; 
 }
+
+select {
+    padding: 1em;
+    font-size: 1.2em;
+    margin: 2em auto; 
+    display: block;
+    width: calc(100% - 4em); /* Subtracting padding from the total width */
+    max-width: 500px;
+    border: 2px solid #555; 
+    border-radius: 12px;
+    appearance: none;
+    background-color: #333; 
+    color: #DDD; 
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box; /* To include padding and border in the width */
+}
+
+select:hover {
+    border-color: #777;
+    transform: scale(1.02); /* Slightly enlarges the select box when hovered */
+}
+
+select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.chart-container {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+
+#map {
+    height: 400px; /* or 100vh for full height */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+th {
+    background-color: #9d9d9d;
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
