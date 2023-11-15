@@ -1,0 +1,105 @@
+body {
+    background: linear-gradient(to bottom, #000000, #1a1a1a);
+    background-attachment: fixed;  
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0; 
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;  
+    width: 100%;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: gray;
+}
+
+h1.header {
+    text-align: center;
+    margin-top: 120px; 
+    font-size: 2em;
+}
+
+section {
+    padding: 50px 20px;  
+    margin-top: 1000px;  
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px; 
+    display: inline-block;  
+    padding-bottom: 5px;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+select {
+    padding: 1em;
+    font-size: 1.2em;
+    margin: 2em auto; 
+    display: block;
+    width: calc(100% - 4em); /* Subtracting padding from the total width */
+    max-width: 500px;
+    border: 2px solid #555; 
+    border-radius: 12px;
+    appearance: none;
+    background-color: #333; 
+    color: #DDD; 
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    box-sizing: border-box; /* To include padding and border in the width */
+}
+
+select:hover {
+    border-color: #777;
+    transform: scale(1.02); /* Slightly enlarges the select box when hovered */
+}
+
+select:focus {
+    outline: none;
+    border-color: #999;
+}
+
+.chart-container {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+}
+
+
+#map {
+    height: 400px; /* or 100vh for full height */
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+th {
+    background-color: #9d9d9d;
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
