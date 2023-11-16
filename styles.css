@@ -37,7 +37,8 @@ h1.header {
 
 section {
     padding: 50px 20px;  
-    margin-top: 1000px;  
+    margin-top: 15%;  
+    margin-bottom: 15%;
 }
 
 section h2 {
@@ -48,6 +49,7 @@ section h2 {
     padding-bottom: 5px;
     width: 100%; 
     box-sizing: border-box; 
+    margin-bottom: 3%;
 }
 
 select {
@@ -102,4 +104,107 @@ th, td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+}
+
+#header {
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+#header h1 {
+    font-size: 2em;
+    color: white;
+    font-family: 'Segoe UI';
+    margin: 0;
+    padding: 0;
+    margin-top: 8%;
+    animation: fadeIn 2s ease-out 4s forwards;
+}
+
+#textbox {
+    color: white;
+    font-family: 'Segoe UI';
+    font-size: 1em;
+    margin-top: 1em; 
+    padding: 0 1em; 
+    width: 80%;
+    animation: fadeIn 2s ease-out 4s forwards;
+    margin-left: 8%;
+}
+
+.three-column-section {
+    display: flex;
+    /* justify-content: space-around; */
+    padding: 0px, 30px;
+    width: 90%;
+    margin-left: 4.5%;
+}
+
+.column {
+    flex: 1;
+    margin: 0 20px; 
+    text-align: center; 
+    margin-bottom: 20%;
+}
+
+.column h2 {
+    font-size: 1.5em;
+    color: #ffffff; 
+    font-family: 'Segoe UI';
+}
+
+.column p {
+    font-size: 1em;
+    color: #d4d4d4; 
+    font-family: 'Segoe UI';
+}
+
+#model-container-2 {
+    position: absolute;
+    top: 100em; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    /* height: auto; */
+}
+
+#canvas-container-2 {
+    top: 70%; 
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; /* Removes the border */
+}
+
+#api-frame {
+    width: 1000px;
+    height: 800px;
+    margin:auto;
+    margin-top: 10%;
+
+}
+
+/* diff types of keyframes to use */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

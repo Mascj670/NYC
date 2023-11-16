@@ -1009,3 +1009,35 @@ function updateCostTable(selectedCity) {
 
 // Initialize the table with data from the first city
 updateCostTable('Miami_FL_vs_NewYork_NY');
+
+
+//sketchfab
+
+// Sketchfab Viewer Initialization
+var iframe = document.getElementById('api-frame');
+var version = '1.7.0';
+var urlid = '2d9944241223457d9b88c866e38736c3';
+var client = new Sketchfab(version, iframe);
+
+client.init(urlid, {
+    success: function onSuccess(api) {
+        api.start();
+        api.addEventListener('viewerready', function() {
+            console.log('Viewer is ready');
+
+            api.setBackground({color: [0, 0, 0]}, function() {
+                console.log('Background changed to black');
+            });
+        });
+    },
+    error: function onError() {
+        console.log('Viewer error');
+    }
+});
+
+document.getElementById('background-color').addEventListener('click', function () {
+    var color = [0, 0, 0, 1]; // Black color
+    api.setBackground({color: color}, function () {
+      console.log('Background updated to black');
+    });
+  });

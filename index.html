@@ -18,7 +18,27 @@
         <a href="#housing-section">Housing</a>
         <a href="#expenses-section">Expenses</a>
     </nav>
-    <h1 class="header">Title of Project</h1>
+
+    <div id="header">
+        <h1 id="animated-heading">New York City is the 6th most expensive city in the world</h1>
+        <div id="textbox">Making it the most expensive city in North America compared to its counterparts such as Los Angeles (ranked 11th) and San Francisco (14th). New York City, the beacon of dreams and ambition, is a global hub of culture, diversity, and unparalleled influence in commerce, finance, and the arts.</div>
+    </div>
+
+    <section class="three-column-section">
+        <div class="column">
+            <h2>Housing</h2>
+            <p>At the pinnacle of extravagance, the penthouse of Central Park Tower stands out, valued at an astonishing $250 million. This illustrious residence, situated in one of the city’s most coveted locations, holds the title of the highest residential home on the planet, complete with the world’s highest residential terrace.</p>
+        </div>
+        <div class="column">
+            <h2>Salary</h2>
+            <p>The average wage in the United States is roughly $59,000, which is insignificant in comparison to New York City's average of $79,000, reflecting the city's high cost of living and economic importance. This figure is far higher than the global average pay, which is believed to be around $18,000, highlighting the massive economic differences across different locales.</p>
+        </div>
+        <div class="column">
+            <h2>Cost of Living</h2>
+            <p>This significant price increase is indicative of the broader rise in New York City's cost of living, which is now 30% higher than the average of other states. Specifically, housing costs are 78% higher than the national average.The living expenses for a single person estimated monthly cost is $1553 without rent and mortgage.</p>
+        </div>
+    </section>
+
     <section id="salary-section">
         <h2>Salary</h2>
         <!-- Salary section -->
@@ -39,10 +59,21 @@
         
 
     </section>
+
+        
+
     <section id="housing-section">
         <h2>Housing</h2>
         <!-- Housing section -->
-
+        <!-- Sketchfab Viewer -->
+        <div id="api-frame">
+            <iframe title="City as a System" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/2d9944241223457d9b88c866e38736c3/embed"></iframe>
+        </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+            <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.7.0.js"></script>
+        
+            <script src="js/site.js"></script>
+            <script type="module" src="js/site.js"></script>
         <select id="apartmentType" onchange="updateChart()">
             <option value="Studio">Studio</option>
             <option value="1 Bedroom">1 Bedroom</option>
