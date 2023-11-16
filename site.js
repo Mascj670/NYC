@@ -1009,3 +1009,74 @@ function updateCostTable(selectedCity) {
 
 // Initialize the table with data from the first city
 updateCostTable('Miami_FL_vs_NewYork_NY');
+
+
+
+
+
+
+document.getElementById('btnFood').addEventListener('click', function() {
+  console.log('Food button clicked');
+  toggleDisplay('food');
+});
+
+document.getElementById('btnHealthcare').addEventListener('click', function() {
+  console.log('Healthcare button clicked');
+  toggleDisplay('healthcare');
+});
+
+document.getElementById('btnHousing').addEventListener('click', function() {
+  console.log('Housing button clicked');
+  toggleDisplay('housing');
+});
+
+document.getElementById('btnTransportation').addEventListener('click', function() {
+  console.log('Transportation button clicked');
+  toggleDisplay('transportation');
+});
+
+function toggleDisplay(category) {
+  console.log('Toggling display for:', category);
+  // Hide all images and explanations
+  document.querySelectorAll('.topimage, .explanation').forEach(function(el) {
+      el.style.display = 'none';
+  });
+
+  // Show the selected image and explanation
+  document.getElementById('topimage' + category).style.display = 'block';
+  document.getElementById(category + 'explanation').style.display = 'block';
+}
+
+
+(function () {
+    "use strict";
+  
+    // define variables
+    var items = document.querySelectorAll(".timeline li"); 
+  
+    // check if an element is in viewport
+    function isElementInViewport(el) {
+      var rect = el.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+  
+    function callbackFunc() {
+      for (var i = 0; i < items.length; i++) {
+        if (isElementInViewport(items[i])) {
+          items[i].classList.add("in-view");
+        }
+      }
+    }
+  
+    // listen for events
+    window.addEventListener("load", callbackFunc);
+    window.addEventListener("resize", callbackFunc);
+    window.addEventListener("scroll", callbackFunc);
+  })();
+    
