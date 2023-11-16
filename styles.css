@@ -172,17 +172,17 @@ th, td {
     font-family: Arial, sans-serif;
     margin: 0; 
     font-size: 16px;
-    padding: 10%;
+    padding: 5%;
 }
 
 .content-paragraph, .salary-paragraph {
-    margin-top: 10%;
+    margin-top: 20%;
     font-size: 16px;
     line-height: 1.6;
     font-family: Arial, sans-serif;
     color: white;
     text-align: left;
-    padding: 10%;
+    padding: 5%;
 }
 
 .three-column-section {
