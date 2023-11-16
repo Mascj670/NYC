@@ -437,7 +437,7 @@ iframe {
   
   /* Timeline Styles */
   .timeline ul {
-    /* background:  #1e1e1e; */
+    background:  #1e1e1e;
     padding: 50px 0;
   }
   
@@ -497,7 +497,7 @@ iframe {
   .timeline ul li:nth-child(even) div::before {
     right: -15px;
     border-width: 8px 0 8px 16px;
-    border-color: transparent transparent transparent #cdab00;
+    border-color: transparent  transparent transparent  #cdab00;
   }
   
   /* Additional Styles */
