@@ -1035,9 +1035,161 @@ client.init(urlid, {
     }
 });
 
-document.getElementById('background-color').addEventListener('click', function () {
-    var color = [0, 0, 0, 1]; // Black color
-    api.setBackground({color: color}, function () {
-      console.log('Background updated to black');
-    });
+// document.getElementById('background-color').addEventListener('click', function () {
+//     var color = [0, 0, 0, 1]; // Black color
+//     api.setBackground({color: color}, function () {
+//       console.log('Background updated to black');
+//     });
+//   });
+
+  // code for three.js model however, commented out as the model loaded requires vite in node.js
+  // and it is unable to bug fix the decimated model before deadline as there are conflicts between the
+  // apis in chart.js and three.js.
+
+//   import * as THREE from 'three';
+// import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+
+// // First Scene
+// const scene1 = new THREE.Scene();
+// const camera1 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// const renderer1 = new THREE.WebGLRenderer({ alpha: true });
+// renderer1.setSize(window.innerWidth, window.innerHeight);
+// document.getElementById('canvas-container').appendChild(renderer1.domElement);
+
+// const loader1 = new GLTFLoader();
+// loader1.load('assets/toolargebuilding.gltf', function (gltf) {
+//     scene1.add(gltf.scene);
+//     gltf.scene.rotation.x += 0.005;
+//     animate1();
+// }, undefined, function (error) {
+//     console.error(error);
+// });
+
+// camera1.position.z = 30;
+
+// const light1 = new THREE.HemisphereLight(0xffffff, 0x444444);
+// light1.position.set(1, 1, 1);
+// scene1.add(light1);
+
+// const backlight1 = new THREE.PointLight(0xffffff, 1, 100);
+// backlight1.position.set(0, 0, -5);
+// scene1.add(backlight1);
+
+// function animate1() {
+//     requestAnimationFrame(animate1);
+//     const gltfModel1 = scene1.children.find(child => child.isGroup);
+//     if (gltfModel1) {
+//         gltfModel1.rotation.y += 0.003;
+//     }
+//     renderer1.render(scene1, camera1);
+// }
+
+// Second Scene
+// const scene2 = new THREE.Scene();
+// const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+// const renderer2 = new THREE.WebGLRenderer({ alpha: true });
+// renderer2.setSize(window.innerWidth * 0.8, window.innerHeight * 0.8);
+// document.getElementById('model-container-2').appendChild(renderer2.domElement);
+
+// const loader2 = new GLTFLoader();
+// loader2.load('assets/scene.gltf', function (gltf) {
+//     scene2.add(gltf.scene);
+//     gltf.scene.rotation.x += 0.005;
+//     animate2();
+// }, undefined, function (error) {
+//     console.error(error);
+// });
+
+// camera2.position.z = 40;
+
+// const light2 = new THREE.HemisphereLight(0xffffff, 0x444444);
+// light2.position.set(1, 1, 1);
+// scene2.add(light2);
+
+// function animate2() {
+//     requestAnimationFrame(animate2);
+//     const gltfModel2 = scene2.children.find(child => child.isGroup);
+//     if (gltfModel2) {
+//         gltfModel2.rotation.y += 0.002;
+//     }
+//     renderer2.render(scene2, camera2);
+// }
+
+// window.addEventListener('resize', onWindowResize, false);
+
+// function onWindowResize() {
+//     camera1.aspect = window.innerWidth / window.innerHeight;
+//     camera1.updateProjectionMatrix();
+//     renderer1.setSize(window.innerWidth, window.innerHeight);
+
+    // camera2.aspect = window.innerWidth / window.innerHeight;
+    // camera2.updateProjectionMatrix();
+    // renderer2.setSize(window.innerWidth * 0.8, window.innerHeight * 0.8);
+// }
+
+  // expenses code
+
+  document.getElementById('btnFood').addEventListener('click', function() {
+    console.log('Food button clicked');
+    toggleDisplay('food');
   });
+  
+  document.getElementById('btnHealthcare').addEventListener('click', function() {
+    console.log('Healthcare button clicked');
+    toggleDisplay('healthcare');
+  });
+  
+  document.getElementById('btnHousing').addEventListener('click', function() {
+    console.log('Housing button clicked');
+    toggleDisplay('housing');
+  });
+  
+  document.getElementById('btnTransportation').addEventListener('click', function() {
+    console.log('Transportation button clicked');
+    toggleDisplay('transportation');
+  });
+  
+  function toggleDisplay(category) {
+    console.log('Toggling display for:', category);
+    // Hide all images and explanations
+    document.querySelectorAll('.topimage, .explanation').forEach(function(el) {
+        el.style.display = 'none';
+    });
+  
+    // Show the selected image and explanation
+    document.getElementById('topimage' + category).style.display = 'block';
+    document.getElementById(category + 'explanation').style.display = 'block';
+  }
+  
+  
+  (function () {
+      "use strict";
+    
+      // define variables
+      var items = document.querySelectorAll(".timeline li"); 
+    
+      // check if an element is in viewport
+      function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    
+      function callbackFunc() {
+        for (var i = 0; i < items.length; i++) {
+          if (isElementInViewport(items[i])) {
+            items[i].classList.add("in-view");
+          }
+        }
+      }
+    
+      // listen for events
+      window.addEventListener("load", callbackFunc);
+      window.addEventListener("resize", callbackFunc);
+      window.addEventListener("scroll", callbackFunc);
+    })();
