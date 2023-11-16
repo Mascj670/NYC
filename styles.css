@@ -103,3 +103,283 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+
+
+
+/* Reset and Basic Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+/* Relative Positioning for Containers */
+.btncontainer, .image-container, .explanations {
+  position: relative; /* This makes them the reference for their children */
+}
+
+
+body {
+  font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+  background: #1e1e1e; /* Color for upper container */
+  color: #ffffff; 
+  overflow-x: hidden;
+  padding-bottom: 50px;
+  line-height: 2.5vw;
+}
+
+/* Button Styles */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 42vh;
+  left: 8vw;
+  width: 10%;
+  z-index: 1000; /* Ensures buttons are above other elements */
+}
+
+.buttons button {
+  cursor: pointer;
+  padding: 10px 0px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  margin-bottom: 10%; /* Space between buttons */
+}
+
+.buttons button:hover {
+  background-color: #45a049;
+}
+
+/* Image Container and Original Image */
+.image-container {
+  position: relative;
+  text-align: center;
+  max-width: 100%;
+}
+
+.original-image {
+  max-width: 60%;
+  max-height: 20%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+/* Top Images */
+.topimage {
+  position: absolute;
+  max-width: 15%;
+  height: auto;
+  display: none; /* Hide by default */
+}
+
+
+  
+#topimagefood {
+  top: 53%;
+  left: 20%;
+  max-width: 40%;
+  max-height: 50%;
+}
+
+
+#topimagehealthcare {
+  top: 11%;
+  right: 50%;
+  max-width: 30%;
+}
+
+#topimagehousing {
+  bottom: -1%;
+    left: 49%;
+    max-width: 32%;
+}
+
+#topimagetransportation {
+  bottom: 43%;
+  right: 19%;
+  max-width: 32%;
+}
+
+/* Explanation Box */
+.explanations {
+  position: absolute;
+  top: 35%;
+  left: 81%;
+}
+
+.explanation {
+  display: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 4.5rem;
+  margin-top: 50px;
+  margin-bottom: -50px;
+}
+
+.text {
+  /* Adjust the width to control the length of the text lines */
+  max-width: 900px; /* Example width, adjust as needed */
+  margin: 0 auto; /* Centers the text block with automatic margins */
+  padding: 20px; /* Adds padding around the text for spacing */
+}
+
+.text h2 {
+  font-size: 43px;
+  margin-top: 138px;
+  margin-bottom: 59px;
+}
+
+.text p {
+  font-size: 16px; /* Adjust the font size as needed */
+  line-height: 1.6; /* Adjusts the space between lines of text */
+  text-align: justify; /* Justifies the text for a cleaner look */
+  margin-bottom: 20px; /* Space below the paragraph */
+}
+
+
+/* Container Styles */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container p {
+  max-width: 5000px;
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+/* Timeline Styles */
+.timeline ul {
+  background:  #1e1e1e;
+  padding: 50px 0;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #ffffff;
+}
+
+.timeline ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  z-index: 1;
+}
+
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 15px;
+  background: #cdab00;
+}
+
+.timeline ul li div::before {
+  content: "";
+  position: absolute;
+  bottom: 7px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent #cdab00 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+  left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent #cdab00;
+}
+
+/* Additional Styles */
+/* (Include any additional styles here) */
+
+/* TIMELINE ANIMATION STYLES */
+
+/* Base styles for timeline elements */
+.timeline ul li::after {
+  transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Animation for odd and even elements */
+.timeline ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+/* Styles when the element is in view */
+.timeline ul li.in-view::after {
+  background: #fadc2e; /* Change color as needed */
+}
+
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Animation Keyframes */
+@keyframes scaleAnimation {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.25);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
