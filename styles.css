@@ -114,34 +114,59 @@ th, td {
   padding: 0;
   box-sizing: border-box;
 }
- 
-/* Relative Positioning for Containers */
-.btncontainer, .image-container, .explanations {
-  position: relative; /* This makes them the reference for their children */
-}
-
 
 body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif;
   background: #1e1e1e; /* Color for upper container */
   color: #ffffff; 
-  overflow-x: hidden;
+  /* overflow-x: hidden;
   padding-bottom: 50px;
-  line-height: 2.5vw;
+  line-height: 2.5vw; */
 }
 
-/* Button Styles */
+.all {
+  width: 100%;
+  height: 100%;
+}
+.header {
+  width: 100%;
+  height: 10%;
+  position: relative;
+}
+.header p{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 72px;
+  margin-top: 5%;
+}
+.middle {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.box {
+  width: 100%;
+  position: relative;
+}
+.original-image {
+  position: absolute;
+  width: 50%;
+  display: block;
+  margin: 17% 23%;
+}
 .buttons {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 42vh;
-  left: 8vw;
-  width: 10%;
-  z-index: 1000; /* Ensures buttons are above other elements */
+  width: 15%;
+  margin: 20% 5% ;
+  z-index: 1000;
 }
 
-.buttons button {
+.tag {
+  margin-left: 5%;
+  margin-top: 35%;
   cursor: pointer;
   padding: 10px 0px;
   background-color: #4CAF50;
@@ -150,83 +175,69 @@ body {
   border-radius: 5px;
   font-size: 14px;
   transition: background-color 0.3s;
-  margin-bottom: 10%; /* Space between buttons */
+  /* margin-bottom: 50px; */
+   /* Space between buttons */
 }
 
 .buttons button:hover {
   background-color: #45a049;
 }
-
 /* Image Container and Original Image */
 .image-container {
   position: relative;
-  text-align: center;
-  max-width: 100%;
 }
-
-.original-image {
-  max-width: 60%;
-  max-height: 20%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: 100px;
-}
-
 /* Top Images */
 .topimage {
-  position: absolute;
+  /* position: absolute;
   max-width: 15%;
-  height: auto;
+  height: auto; */
   display: none; /* Hide by default */
 }
-
-
-  
 #topimagefood {
-  top: 53%;
-  left: 20%;
-  max-width: 40%;
-  max-height: 50%;
+  position: absolute;
+  width: 31%;
+  left: 23.1%;
+  margin-top: 35.7%;
 }
 
-
 #topimagehealthcare {
-  top: 11%;
-  right: 50%;
-  max-width: 30%;
+  position: absolute;
+  width: 25%;
+  left: 23%;
+  margin-top: 16.9%;
 }
 
 #topimagehousing {
-  bottom: -1%;
-    left: 49%;
-    max-width: 32%;
+  position: absolute;
+  width: 25%;
+  left: 48%;
+  margin-top: 35.7%;
 }
 
 #topimagetransportation {
-  bottom: 43%;
-  right: 19%;
-  max-width: 32%;
+  position: absolute;
+  width: 25%;
+  left: 48%;
+  margin-top: 17%;
 }
-
 /* Explanation Box */
 .explanations {
-  position: absolute;
-  top: 35%;
-  left: 81%;
+  position: relative;
 }
 
 .explanation {
+  position: absolute;
   display: none;
   background-color: #4CAF50;
   color: white;
   padding: 10px;
   margin-bottom: 10px;
   width: 300px;
+  left: 76%;
+  margin-top: 20%;
   border-radius: 5px;
   line-height: 1.5;
 }
-
 /* Heading Styles */
 h1 {
   font-size: 4.5rem;
@@ -256,7 +267,7 @@ h1 {
 
 
 /* Container Styles */
-.container {
+/* .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -267,7 +278,7 @@ h1 {
   max-width: 5000px;
   margin-left: auto;
   margin-right: auto;
-} 
+}  */
 
 /* Timeline Styles */
 .timeline ul {
@@ -383,3 +394,4 @@ h1 {
     transform: translateX(-50%) scale(1);
   }
 }
+
