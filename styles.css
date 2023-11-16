@@ -437,14 +437,14 @@ iframe {
   
   /* Timeline Styles */
   .timeline ul {
-    background:  #1e1e1e;
+    /* background:  #1e1e1e; */
     padding: 50px 0;
   }
   
   .timeline ul li {
     list-style-type: none;
     position: relative;
-    width: 6px;
+    width: 5px;
     margin: 0 auto;
     padding-top: 50px;
     background: #ffffff;
@@ -466,7 +466,7 @@ iframe {
   .timeline ul li div {
     position: relative;
     bottom: 0;
-    width: 400px;
+    width: 370px;
     padding: 15px;
     background: #cdab00;
   }
