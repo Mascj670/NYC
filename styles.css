@@ -67,6 +67,7 @@ select {
     cursor: pointer;
     transition: border-color 0.3s ease, transform 0.3s ease;
     box-sizing: border-box; /* To include padding and border in the width */
+    margin-top: 5%;
 }
 
 select:hover {
@@ -139,6 +140,22 @@ th, td {
     padding: 0px, 30px;
     width: 90%;
     margin-left: 4.5%;
+}
+
+fieldset {
+    margin-top: 10%;
+}
+
+canvas#costOfLivingChart {
+    margin-top: 10%;
+}
+
+canvas#salaryHistogramChart {
+    margin-bottom: 5%;
+}
+
+section#housing-section {
+    margin-bottom: -25%;
 }
 
 .column {
